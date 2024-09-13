@@ -28,7 +28,7 @@ function App() {
         <div className="flex flex-col md:flex-row justify-between items-center h-full pt-24 md:pt-0">
           <div className="w-full md:w-[40%] text-center md:text-left pl-40">
             <h2 className="text-white text-4xl md:text-6xl font-medium mb-6">Make your room comfy and beautiful.</h2>
-            <button className="bg-white hover:bg-gray-100 text-green-600 font-medium rounded-lg text-xl px-6 py-2 mr-4 mb-4">
+            <button className="bg-white hover:bg-gray-100 text-green-600 font-medium rounded-lg text-xl px-8 py-2 mr-4 mb-4">
               Shop
             </button>
             <button className="bg-transparent hover:bg-green-600 text-white font-medium rounded-lg text-xl px-6 py-2 border border-white">
