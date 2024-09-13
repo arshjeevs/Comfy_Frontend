@@ -9,143 +9,102 @@ import { MdArrowOutward } from "react-icons/md";
 
 function App() {
   return (
-    <>
-      <div className="main p-0 m-0 box-border">
-        <header className="bg-green-500 relative h-full">
-          <nav className="absolute w-full h-[110px] pl-8 pt-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center justify-center text-4xl text-white p-4">
-                <img
-                  className="w-[43px] h-[43px]"
-                  src={Logo}
-                  alt="Comfy logo"
-                />
-                <h1 className="font-semibold text-4xl p-2">Comfy.</h1>
-              </div>
-              <ul className="flex justify-around gap-20 text-white font-semibold text-2xl pr-36">
-                <li>
-                  <a href="#home">Home</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#shop">Shop</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
+    <div className="main p-0 m-0 box-border">
+      <header className="bg-green-500 relative min-h-screen">
+        <nav className="absolute w-full p-4 md:p-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center justify-center text-3xl md:text-4xl text-white">
+              <img className="w-8 h-8 md:w-[43px] md:h-[43px]" src={Logo} alt="Comfy logo" />
+              <h1 className="font-semibold ml-2">Comfy.</h1>
             </div>
-          </nav>
-          <div className="flex justify-between items-center h-full">
-            <div className="h-3/6 w-6/12 flex justify-center items-center">
-              <div className="text-white text-6xl font-medium w-[330px]">
-                <h2>Make your room comfy and beautiful.</h2>
-                <button className="bg-white hover:bg-white text-green-600 font-medium rounded-lg text-xl px-7 py-2.5 me-6 mb-2 outline-2">
-                  Shop
-                </button>
-                <button className="bg-transparent hover:bg-green-600 text-white font-medium rounded-lg text-xl px-7 py-2.5 me-2 mb-2 outline">
-                  Explore
-                </button>
-              </div>
-            </div>
-            <img
-              className="w-6/12 object-cover h-full"
-              src={HeroImage}
-              alt="Comfortable room interior"
-            />
+            <ul className="flex flex-wrap justify-center md:justify-around gap-8 md:gap-20 text-white font-semibold text-lg md:text-2xl mt-4 md:mt-0 md:pr-24">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
-        </header>
-
-        <div className="bg-white w-screen h-full">
-          <div className="flex justify-between p-12">
-            <div className="p-20 m-4">
-              <h3 className="font-semibold text-8xl my-8">About us</h3>
-              <p className="w-[21rem]  text-slate-400 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-              </p>
-            </div>
-            <div className="w-6/12 h-full">
-              <img src={Page2Image} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="w-screen h-full">
-          <div className="p-8">
-            <h1 className="text-7xl font-medium font-poppins pl-20 m-8">
+        </nav>
+        <div className="flex flex-col md:flex-row justify-between items-center h-full pt-24 md:pt-0">
+          <div className="w-full md:w-[40%] text-center md:text-left pl-40">
+            <h2 className="text-white text-4xl md:text-6xl font-medium mb-6">Make your room comfy and beautiful.</h2>
+            <button className="bg-white hover:bg-gray-100 text-green-600 font-medium rounded-lg text-xl px-6 py-2 mr-4 mb-4">
               Shop
-            </h1>
-            <div className="flex justify-between mx-16 px-12 gap-16">
-              <CardComponent image={SofaImage} />
-              <CardComponent image={SofaImage} />
-              <CardComponent image={SofaImage} />
-            </div>
+            </button>
+            <button className="bg-transparent hover:bg-green-600 text-white font-medium rounded-lg text-xl px-6 py-2 border border-white">
+              Explore
+            </button>
           </div>
+          <img className="w-full md:w-1/2 object-cover h-64 md:h-screen" src={HeroImage} alt="Comfortable room interior" />
         </div>
-        <div className="w-full h-full flex items-center justify-center py-[10rem] m-18">
-          <div className="w-3/4 h-full bg-green-500 flex justify-between">
-            <div className="p-4">
-              <h1 className="text-5xl font-medium pt-8 pl-1 m-8 text-white font-poppins">
-                Contact
-              </h1>
-              <div className="p-8 flex flex-col justify-between gap-10 items-center">
-                <InputComponent placeholder={"Name"} />
-                <InputComponent placeholder={"Email"} />
-                <textarea
-                  id="message"
-                  rows="4"
-                  className="block py-4 px-6  placeholder-opacity-60 p-2.5 w-full text-sm rounded border text-white placeholder-white font-poppins text-xl border-none outline-none bg-green-600"
-                  placeholder="Message"
-                ></textarea>
-                <div className="flex flex-start w-full">
-                  <button
-                    type="button"
-                    class="text-green-600 bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-7 py-2.5  me-6 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    Send
-                  </button>
-                </div>
-              </div>
-            </div>
+      </header>
 
-            <img className="w-3/6 object-cover" src={HeroImage} alt="" />
+      <section id="about" className="bg-white w-full py-12">
+        <div className="flex flex-col md:flex-row justify-between p-4 md:p-12">
+          <div className="md:w-1/2 p-4 md:p-8">
+            <h3 className="font-semibold text-5xl md:text-8xl mb-6">About us</h3>
+            <p className="text-slate-400 font-medium max-w-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque praesentium incidunt a, minima rerum mollitia perferendis ratione unde tempore. Animi vero sed a magni ipsam eligendi quaerat, vitae nisi vel.
+              Ex debitis ea beatae perferendis voluptate nihil adipisci deserunt suscipit quam incidunt? Vel modi magnam cumque ullam maiores quo voluptates asperiores repellat numquam, distinctio deleniti quae molestiae sint consequuntur dolore.
+              Perspiciatis quis dicta odit facilis fugit vero nostrum repudiandae repellendus at magnam sequi nulla libero.
+            </p>
+          </div>
+          <div className="md:w-1/2 mt-8 md:mt-0">
+            <img src={Page2Image} alt="About us illustration" className="w-full h-auto" />
           </div>
         </div>
-        <div className="footer w-full h-[400px] bg-green-600">
-          <div className="flex justify-between">
-            <div className="logo p-20">
-              <div className="flex gap-2 pb-2">
-                <img src={Logo} alt="" />
-                <h1 className="font-semibold text-4xl p-2 text-white">
-                  Comfy.
-                </h1>
-              </div>
-              <p className="text-white text-opacity-50">@ComfyTM 2021</p>
-            </div>
-            <div className="links flex flex-col justify-between p-20 text-4xl gap-4 text-white font-poppins">
-              <p className="text-lg text-slate-300 font-poppins">
-                Social Media
-              </p>
-              <a className="flex" href="">
-                Instagram <MdArrowOutward />
-              </a>
-              <a className="flex" href="">
-                Facebook <MdArrowOutward />
-              </a>
-              <a className="flex" href="">
-                Twitter <MdArrowOutward />
-              </a>
-            </div>
+      </section>
+
+      <section id="shop" className="w-full py-12">
+        <div className="p-4 md:p-8">
+          <h1 className="text-5xl md:text-7xl font-medium font-poppins text-center md:text-left mb-8 md:pl-[7.5rem]">Shop</h1>
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8">
+            <CardComponent image={SofaImage} />
+            <CardComponent image={SofaImage} />
+            <CardComponent image={SofaImage} />
           </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      <section id="contact" className="w-full py-12 px-4 md:px-0 md:py-8">
+        <div className="w-full md:w-3/4 mx-auto bg-green-500 flex flex-col md:flex-row justify-between">
+          <div className="p-4 w-full md:w-1/2 md:pt-24 md:px-16 ">
+            <h1 className="text-4xl md:text-5xl font-medium text-white font-poppins mb-8">Contact</h1>
+            <div className="flex flex-col gap-6">
+              <InputComponent placeholder="Name" />
+              <InputComponent placeholder="Email" />
+              <textarea
+                rows="4"
+                className="w-full pl-6 pt-4 text-white placeholder-white bg-green-600 rounded placeholder-opacity-60 outline-none font-poppins"
+                placeholder="Message"
+              ></textarea>
+              <button className="self-start bg-white hover:bg-gray-100 text-green-600 font-medium rounded-lg text-xl px-8 py-2">
+                Send
+              </button>
+            </div>
+          </div>
+          <img className="w-full md:w-1/2 object-cover" src={HeroImage} alt="Contact illustration" />
+        </div>
+      </section>
+
+      <footer className="bg-green-600 py-20 mt-20">
+        <div className="flex flex-col md:flex-row justify-between px-4 md:px-20">
+          <div className="mb-8 md:mb-0">
+            <div className="flex items-center gap-2 mb-4">
+              <img src={Logo} alt="Comfy logo" className="w-10 h-10" />
+              <h1 className="font-semibold text-3xl text-white">Comfy.</h1>
+            </div>
+            <p className="text-white text-opacity-50">@ComfyTM 2021</p>
+          </div>
+          <div className="flex flex-col gap-4 text-white font-poppins">
+            <p className="text-lg text-slate-300">Social Media</p>
+            <a className="flex items-center" href="#">Instagram <MdArrowOutward className="ml-2" /></a>
+            <a className="flex items-center" href="#">Facebook <MdArrowOutward className="ml-2" /></a>
+            <a className="flex items-center" href="#">Twitter <MdArrowOutward className="ml-2" /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 
