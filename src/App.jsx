@@ -1,11 +1,8 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import myImage from "./Images/image.png";
+import React from "react";
 import Logo from "./Images/Logo.png";
-import page2 from "./Images/Page2.png";
-import sofa from "./Images/sofa.png";
+import HeroImage from "./Images/image.png";
+import Page2Image from "./Images/Page2.png";
+import SofaImage from "./Images/sofa.png";
 import CardComponent from "./Components/CardComponent";
 import InputComponent from "./Components/InputComponent";
 import { MdArrowOutward } from "react-icons/md";
@@ -14,46 +11,53 @@ function App() {
   return (
     <>
       <div className="main p-0 m-0 box-border">
-        <div className="Hero bg-green-500 relative">
-          <div className="nav absolute w-full h-[110px]">
+        <header className="bg-green-500 relative h-full">
+          <nav className="absolute w-full h-[110px] pl-8 pt-4">
             <div className="flex justify-between items-center">
               <div className="flex items-center justify-center text-4xl text-white p-4">
-                <img className="w-[43 px] h-[43px] " src={Logo} alt="" />
+                <img
+                  className="w-[43px] h-[43px]"
+                  src={Logo}
+                  alt="Comfy logo"
+                />
                 <h1 className="font-semibold text-4xl p-2">Comfy.</h1>
               </div>
-              <div className="flex justify-around gap-24 text-white font-semibold text-2xl pr-36">
-                <h3>Home</h3>
-                <h3>About</h3>
-                <h3>Shop</h3>
-                <h3>Contact</h3>
-              </div>
+              <ul className="flex justify-around gap-20 text-white font-semibold text-2xl pr-36">
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#shop">Shop</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="bg-green-500 h-screen flex justify-between items-center">
+          </nav>
+          <div className="flex justify-between items-center h-full">
             <div className="h-3/6 w-6/12 flex justify-center items-center">
               <div className="text-white text-6xl font-medium w-[330px]">
-                <h1>Make your room comfy and beautiful.</h1>
-                <button
-                  type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-7 py-2.5  me-6 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                >
+                <h2>Make your room comfy and beautiful.</h2>
+                <button className="bg-white hover:bg-white text-green-600 font-medium rounded-lg text-xl px-7 py-2.5 me-6 mb-2 outline-2">
                   Shop
                 </button>
-                <button
-                  type="button"
-                  class="text-white bg-transparent outline hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                >
-                  Shop
+                <button className="bg-transparent hover:bg-green-600 text-white font-medium rounded-lg text-xl px-7 py-2.5 me-2 mb-2 outline">
+                  Explore
                 </button>
               </div>
             </div>
             <img
-              className="w-6/12 object-cover h-screen"
-              src={myImage}
-              alt=""
+              className="w-6/12 object-cover h-full"
+              src={HeroImage}
+              alt="Comfortable room interior"
             />
           </div>
-        </div>
+        </header>
+
         <div className="bg-white w-screen h-full">
           <div className="flex justify-between p-12">
             <div className="p-20 m-4">
@@ -68,7 +72,7 @@ function App() {
               </p>
             </div>
             <div className="w-6/12 h-full">
-              <img src={page2} alt="" />
+              <img src={Page2Image} alt="" />
             </div>
           </div>
         </div>
@@ -78,9 +82,9 @@ function App() {
               Shop
             </h1>
             <div className="flex justify-between mx-16 px-12 gap-16">
-              <CardComponent image={sofa} />
-              <CardComponent image={sofa} />
-              <CardComponent image={sofa} />
+              <CardComponent image={SofaImage} />
+              <CardComponent image={SofaImage} />
+              <CardComponent image={SofaImage} />
             </div>
           </div>
         </div>
@@ -110,7 +114,7 @@ function App() {
               </div>
             </div>
 
-            <img className="w-3/6 object-cover" src={myImage} alt="" />
+            <img className="w-3/6 object-cover" src={HeroImage} alt="" />
           </div>
         </div>
         <div className="footer w-full h-[400px] bg-green-600">
@@ -125,10 +129,18 @@ function App() {
               <p className="text-white text-opacity-50">@ComfyTM 2021</p>
             </div>
             <div className="links flex flex-col justify-between p-20 text-4xl gap-4 text-white font-poppins">
-              <p className="text-lg text-slate-300 font-poppins">Social Media</p>
-              <a className='flex' href="">Instagram <MdArrowOutward /></a>
-              <a className='flex' href="">Facebook <MdArrowOutward /></a>
-              <a className='flex' href="">Twitter <MdArrowOutward /></a>
+              <p className="text-lg text-slate-300 font-poppins">
+                Social Media
+              </p>
+              <a className="flex" href="">
+                Instagram <MdArrowOutward />
+              </a>
+              <a className="flex" href="">
+                Facebook <MdArrowOutward />
+              </a>
+              <a className="flex" href="">
+                Twitter <MdArrowOutward />
+              </a>
             </div>
           </div>
         </div>
